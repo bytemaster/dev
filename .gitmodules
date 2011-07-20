@@ -1,3 +1,6 @@
 [submodule "libs/dynamic_any"]
 	path = libs/dynamic_any
 	url = git@github.com:bytemaster/Boost.DynamicAny.git
+[submodule "libs/atomic"]
+	path = libs/atomic
+	url = git@github.com:bytemaster/boost_atomic.git
