@@ -16,3 +16,9 @@
 [submodule "libs/cmt"]
 	path = libs/cmt
 	url = git@github.com:bytemaster/Boost.CMT.git
+[submodule "libs/rpc"]
+	path = libs/rpc
+	url = git@github.com:bytemaster/Boost.RPC.git
+[submodule "libs/json"]
+	path = libs/json
+	url = git@github.com:bytemaster/json.git
