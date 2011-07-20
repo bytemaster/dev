@@ -1,0 +1,3 @@
+[submodule "libs/dynamic_any"]
+	path = libs/dynamic_any
+	url = git@github.com:bytemaster/Boost.DynamicAny.git
