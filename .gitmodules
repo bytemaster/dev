@@ -4,3 +4,9 @@
 [submodule "libs/atomic"]
 	path = libs/atomic
 	url = git@github.com:bytemaster/boost_atomic.git
+[submodule "libs/move"]
+	path = libs/move
+	url = git@github.com:bytemaster/boost_move.git
+[submodule "libs/context"]
+	path = libs/context
+	url = git@github.com:bytemaster/boost_context.git
