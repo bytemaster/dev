@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>Bytemaster&#39;s Boost Libraries: Main Page</title>
+<title>Bytemaster&#39;s Boost Libraries: Organization</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javaScript" src="search/search.js"></script>
@@ -17,7 +17,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="navigation" id="top">
   <div class="tabs">
     <ul>
-      <li class="current"><a href="index.html"><span>Main&nbsp;Page</span></a></li>
+      <li><a href="index.html"><span>Main&nbsp;Page</span></a></li>
       <li><a href="pages.html"><span>Related&nbsp;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
@@ -39,7 +39,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <div class="contents">
-<h1>Bytemaster's Boost Libraries Documentation</h1></div>
+<h1>Organization</h1><table border="0" cellpadding="0" cellspacing="0">
+</table>
+<p>Boost.RPC is designed to separate serialization, protocol, transport, and interface. So it should support JSON RPC over HTTP, TCP, SSL, UDP. It should also support Google Protocol Buffers over TCP, UDP, UDT, etc.</p>
+<p>The order of abstraction is:</p>
+<div align="center">
+<img src="inline_dotgraph_1.dot.png" alt="inline_dotgraph_1.dot" border="0" usemap="#inline_dotgraph_1.dot.map">
+<map name="inline_dotgraph_1.dot.map" id="inline_dotgraph_1.dot.map"></map>
+</div>
+<ul>
+<li><a class="el" href="classboost_1_1reflect_1_1any__ptr.html" title="Behaves like a smart pointer that can handle any type with the same interface.">boost::reflect::any_ptr</a><ul>
+<li><a class="el" href="classboost_1_1rpc_1_1json_1_1client.html">json::client boost::rpc::json::connection json::connection #boost::rpc::json::tcp::connection json::tcp::connection </a></li>
+</ul>
+</li>
+</ul>
+</div>
 <!--- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"

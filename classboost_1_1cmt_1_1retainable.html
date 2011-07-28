@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>Bytemaster&#39;s Boost Libraries: Main Page</title>
+<title>Bytemaster&#39;s Boost Libraries: boost::cmt::retainable Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javaScript" src="search/search.js"></script>
@@ -17,10 +17,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="navigation" id="top">
   <div class="tabs">
     <ul>
-      <li class="current"><a href="index.html"><span>Main&nbsp;Page</span></a></li>
+      <li><a href="index.html"><span>Main&nbsp;Page</span></a></li>
       <li><a href="pages.html"><span>Related&nbsp;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -37,9 +37,54 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Class&nbsp;List</span></a></li>
+      <li><a href="classes.html"><span>Class&nbsp;Index</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&nbsp;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&nbsp;Members</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><b>boost</b>::<b>cmt</b>::<a class="el" href="classboost_1_1cmt_1_1retainable.html">retainable</a>
+  </div>
 </div>
 <div class="contents">
-<h1>Bytemaster's Boost Libraries Documentation</h1></div>
+<h1>boost::cmt::retainable Class Reference</h1><!-- doxytag: class="boost::cmt::retainable" -->
+<p>provides reference counted type  
+<a href="#_details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="retainable_8hpp_source.html">retainable.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for boost::cmt::retainable:</div>
+<div class="dynsection">
+ <div class="center">
+  <img src="classboost_1_1cmt_1_1retainable.png" usemap="#boost::cmt::retainable_map" alt=""/>
+  <map id="boost::cmt::retainable_map" name="boost::cmt::retainable_map">
+<area href="classboost_1_1rpc_1_1json_1_1connection.html" alt="boost::rpc::json::connection" shape="rect" coords="0,56,187,80"/>
+<area href="classboost_1_1rpc_1_1json_1_1tcp_1_1connection.html" alt="boost::rpc::json::tcp::connection" shape="rect" coords="0,112,187,136"/>
+</map>
+ </div>
+</div>
+
+<p><a href="classboost_1_1cmt_1_1retainable-members.html">List of all members.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9610b217d6bf4c3a18bffd336cda542e"></a><!-- doxytag: member="boost::cmt::retainable::retain" ref="a9610b217d6bf4c3a18bffd336cda542e" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>retain</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34acfdb1f9c851a6f3897b3474e7d699"></a><!-- doxytag: member="boost::cmt::retainable::release" ref="a34acfdb1f9c851a6f3897b3474e7d699" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>release</b> ()</td></tr>
+<tr><td colspan="2"><h2>Friends</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c376244239d567695b7724d855e90f3"></a><!-- doxytag: member="boost::cmt::retainable::stack_retainable" ref="a9c376244239d567695b7724d855e90f3" args="" -->
+class&nbsp;</td><td class="memItemRight" valign="bottom"><b>stack_retainable</b></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Detailed Description</h2>
+<p>provides reference counted type </p>
+<p>Use with retainable_ptr&lt;T&gt; to get automatic retain/release functionality.</p>
+<p>This class uses atomic operations so the reference count is safe for sharing objects among threads </p>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>/Users/dlarimer/dev/libs/cmt/include/boost/cmt/<a class="el" href="retainable_8hpp_source.html">retainable.hpp</a></li>
+</ul>
+</div>
 <!--- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
