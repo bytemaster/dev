@@ -62,15 +62,21 @@ Basic Reflection</a></h2>
     <span class="keyword">struct </span>xml_printer {
         xml_printer( <span class="keyword">const</span> T&amp; c ):self(c){}
 
+        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Type&gt; 
+        <span class="keyword">static</span> xml_printer&lt;Type&gt; make( <span class="keyword">const</span> Type&amp; t ) {
+            <span class="keywordflow">return</span> xml_printer&lt;Type&gt;(t);
+        }
+
         <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Class, <span class="keyword">typename</span> Member&gt;
-        <span class="keywordtype">void</span> operator()( Member Class::*p, <span class="keyword">const</span> <span class="keywordtype">char</span>* name ) {
+        <span class="keywordtype">void</span> operator()( Member Class::*p, <span class="keyword">const</span> <span class="keywordtype">char</span>* name )<span class="keyword">const </span>{
             std::cerr&lt;&lt;<span class="stringliteral">&quot;&lt;&quot;</span>&lt;&lt;name&lt;&lt;<span class="stringliteral">&quot;&gt;&quot;</span>&lt;&lt;(<span class="keyword">self</span>.*p)&lt;&lt;<span class="stringliteral">&quot;&lt;/&quot;</span>&lt;&lt;name&lt;&lt;<span class="stringliteral">&quot;&gt;\n&quot;</span>;
         }
         <span class="keyword">const</span> T&amp; <span class="keyword">self</span>;
     };
 </pre></div><p>The visitor can then be applied like so: </p>
 <div class="fragment"><pre class="fragment">        my_struct s;
-        <a class="code" href="structboost_1_1reflect_1_1reflector.html" title="defines visit functions for T Unless this is specialized, visit() will not be defined...">boost::reflect::reflector&lt;my_struct&gt;::visit</a>( xml_printer(s) );
+        <a class="code" href="structboost_1_1reflect_1_1reflector.html" title="defines visit functions for T Unless this is specialized, visit() will not be defined...">boost::reflect::reflector&lt;my_struct&gt;::visit</a>( xml_printer&lt;my_struct&gt;(s) );
+        <a class="code" href="structboost_1_1reflect_1_1reflector.html" title="defines visit functions for T Unless this is specialized, visit() will not be defined...">boost::reflect::reflector&lt;my_struct&gt;::visit</a>( xml_printer::make(s) );
 </pre></div><h2><a class="anchor" id="boost_reflect_erasures">
 Type Erasures</a></h2>
 <p>Type Erasure is one means to hide implementation details by defining a type that can contain any object that implements the required interface. Examples are boost::any and boost::function. Boost.Reflect enables the rapid generation of new type erasures for arbitrary interfaces via the <a class="el" href="classboost_1_1reflect_1_1any__ptr.html">any_ptr&lt;Interface&gt; </a> type.</p>
